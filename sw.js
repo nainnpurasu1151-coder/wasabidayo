@@ -1,5 +1,5 @@
 // オフラインでも開けるようにするためのキャッシュ
-const CACHE = 'gakkou-techo-v1';
+const CACHE = 'gakkou-techo-v2';
 const FILES = ['./', 'index.html', 'style.css', 'app.js', 'manifest.json', 'icon.svg'];
 
 self.addEventListener('install', (e) => {

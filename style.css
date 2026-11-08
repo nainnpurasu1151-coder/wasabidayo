@@ -198,3 +198,33 @@ dialog .actions { display: flex; gap: 8px; justify-content: flex-end; margin-top
 .empty-state { text-align: center; color: var(--muted); padding: 24px 8px; font-size: 14px; }
 .countdown { font-size: 34px; font-weight: 800; line-height: 1; }
 .countdown small { font-size: 14px; font-weight: 600; margin-left: 2px; }
+
+/* テスト勉強 */
+.progress { height: 8px; border-radius: 999px; background: var(--line); overflow: hidden; margin-top: 4px; }
+.progress > div { height: 100%; background: var(--accent); border-radius: 999px; transition: width .3s; }
+
+.subj-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.subj-table th { text-align: left; font-size: 12px; color: var(--muted); font-weight: 600; padding: 4px 6px 6px 0; }
+.subj-table td { padding: 8px 6px 8px 0; border-top: 1px solid var(--line); vertical-align: middle; }
+.subj-table .up { color: var(--accent); font-weight: 700; }
+.subj-table .down { color: var(--warn); font-weight: 700; }
+
+.timer { font-size: 48px; font-weight: 800; font-variant-numeric: tabular-nums; text-align: center; letter-spacing: 1px; margin: 6px 0 2px; }
+#timer-hint { text-align: center; min-height: 1.4em; }
+
+.bars { position: relative; display: flex; align-items: flex-end; gap: 4px; height: 140px; margin-top: 10px; padding-left: 0; }
+.bars-grid { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; pointer-events: none; }
+.bars-grid span { border-top: 1px solid var(--line); font-size: 10px; color: var(--muted); line-height: 1; padding-top: 2px; }
+.bars-grid span:last-child { border-top-color: var(--muted); }
+.bar-col { position: relative; flex: 1; height: 100%; display: flex; align-items: flex-end; justify-content: center; cursor: pointer; outline: none; }
+.bar { width: 100%; max-width: 18px; min-height: 0; background: var(--accent); opacity: .55; border-radius: 4px 4px 0 0; }
+.bar.today { opacity: 1; }
+.bar-col.on .bar, .bar-col:focus-visible .bar { opacity: 1; box-shadow: 0 0 0 2px var(--card), 0 0 0 3px var(--accent); }
+.bars-x { display: flex; gap: 4px; margin-top: 4px; }
+.bars-x span { flex: 1; text-align: center; font-size: 10px; color: var(--muted); white-space: nowrap; overflow: visible; }
+
+.hbar-row { display: flex; align-items: center; gap: 8px; padding: 5px 0; font-size: 14px; }
+.hbar-name { width: 5.5em; flex: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hbar { flex: 1; height: 10px; }
+.hbar > div { height: 100%; background: var(--accent); border-radius: 0 4px 4px 0; min-width: 2px; }
+.hbar-val { width: 5.5em; flex: none; text-align: right; font-variant-numeric: tabular-nums; }
