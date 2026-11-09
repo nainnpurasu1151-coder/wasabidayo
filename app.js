@@ -54,6 +54,9 @@ function fmtDate(s) {
   const d = parseYmd(s);
   return `${d.getMonth() + 1}/${d.getDate()}(${WEEKDAYS[d.getDay()]})`;
 }
+function fmtDateJa(d) {
+  return `${d.getMonth() + 1}月${d.getDate()}日（${WEEKDAYS[d.getDay()]}）`;
+}
 function relLabel(s) {
   const n = diffDays(today(), parseYmd(s));
   if (n === 0) return { text: '今日', cls: 'warn' };
@@ -1110,6 +1113,7 @@ try {
   currentTab = sessionStorage.getItem('tab') || 'today';
 } catch {}
 if (state.timer) testView = 'study'; // タイマー中はすぐ止められるように
+$('#topbar-date').textContent = fmtDateJa(today());
 render();
 
 if ('serviceWorker' in navigator && location.protocol !== 'file:') {
